@@ -1,7 +1,7 @@
 package codeflow;
 
 public class FindFemFejl {
-
+/*
     public static void main(String[] args) {
         Cinema biogrande = new Cinema(20, 10);
 
@@ -18,5 +18,5 @@ public class FindFemFejl {
 
         // Afbestil reservation på række 1, sæde 5
         System.out.println("Række 1, sæde 5 er afbestilt: " + biogrande.cancelReservation(1, 5));
-    }
+    }*/
 }

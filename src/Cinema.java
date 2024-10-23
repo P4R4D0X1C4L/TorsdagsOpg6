@@ -6,16 +6,21 @@ public class Cinema {
     // Række 0, sæde 0 er altid reserveret til direktøren og skal derfor have værdien X
     // Sæder, der ikke er reserveret, har værdien "O"
     public Cinema(int rows, int seats) {
-        this.seats[0][0] = "X";
         this.seats = new String[rows][seats];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < seats; j++) {
+                this.seats[i][j] = "O";
+            }
+        }
+        this.seats[0][0] = "X";
     }
 
     public int getRows() {
-        return seats.length;
+        return seats.length-1;
     }
 
     public int getSeats() {
-        return seats[0].length;
+        return seats[0].length-1;
     }
 
     // If the seat is not yet reserved, it's value is O.
@@ -30,7 +35,7 @@ public class Cinema {
     }
 
     public boolean cancelReservation(int row, int seat) {
-        if (seats[row][seat].equals("x")) {
+        if (seats[row][seat].equals("X")) {
             seats[row][seat] = "O";
             return true;
         }
@@ -38,7 +43,7 @@ public class Cinema {
     }
 
     public String toString() {
-        String result = null;
+        String result = "";
         for (int i = 0; i < seats.length; i++) {
             result += "|";
             for (int j = 0; j < seats[i].length; j++) {
