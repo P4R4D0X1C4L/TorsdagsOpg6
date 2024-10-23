@@ -1,4 +1,5 @@
 package codeflow;
 
-public class Person {
+public abstract class Person {
+
 }
